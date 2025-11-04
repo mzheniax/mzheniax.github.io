@@ -10,7 +10,9 @@ const cards = [
   { name: "Туз", value: 11, img: "tuz.svg" }
 ];
 let userName = prompt("Введіть своє ім’я:");
-if (!userName) userName = "User";
+if (!userName || userName.trim() === "") {
+    userName = "User";
+}
 document.getElementById("userName").textContent = userName;
 
 let userScore = 0;
@@ -48,3 +50,4 @@ function playRound() {
     }
   }
 }
+
