@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f2f2f2;
+}
+
+#generate {
+    background: limegreen;
+    color: white;
+    border: none;
+    font-size: 22px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+#generate:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+.slot-machine {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: #b0b0ff;
+    padding: 5px;
+}
+
+.column img {
+    width: 80px;
+    height: 80px;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+#result {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+@media (max-width: 500px) {
+    .column img {
+        width: 60px;
+        height: 60px;
+    }
+
+    #generate {
+        font-size: 18px;
+    }
+}
