@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Контроль вивчення мови</h1>
+        </header>
+        <div class="control-panel">
+            <div class="difficulty-selector">
+                <h3>Оберіть рівень складності:</h3>
+                <div class="difficulty-options">
+                    <label class="difficulty-option">
+                        <input type="radio" name="difficulty" value="easy" checked>
+                        <span class="radio-custom"></span>
+                        Початковий
+                    </label>
+                    <label class="difficulty-option">
+                        <input type="radio" name="difficulty" value="medium">
+                        <span class="radio-custom"></span>
+                        Середній
+                    </label>
+                    <label class="difficulty-option">
+                        <input type="radio" name="difficulty" value="hard">
+                        <span class="radio-custom"></span>
+                        Високий
+                    </label>
+                </div>
+            </div>
+            <div class="progress-section">
+                <div class="progress-info">
+                    <span class="progress-text">0/10</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="question-section">
+            <div class="question-card">
+                <h3 class="question-text">Перекладіть слово:</h3>
+                <div class="word-to-translate" id="wordToTranslate">---</div>
+                
+                <div class="input-section">
+                    <input type="text" 
+                           id="translationInput" 
+                           placeholder="Введіть переклад..."
+                           maxlength="50">
+                    <button class="check-btn" id="checkTranslation">Перевірити</button>
+                </div>
+                
+                <div class="result-message" id="resultMessage"></div>
+            </div>
+        </div>
+        <div class="statistics">
+            <div class="stat-item">
+                <span class="stat-label">Статистика:</span>
+            </div>
+            <div class="stat-numbers">
+                <span class="stat-correct">Вірно: <span id="correctCount">0</span></span>
+                <span class="stat-wrong">Невірно: <span id="wrongCount">0</span></span>
+            </div>
+        </div>
+
+        <button class="next-btn" id="nextQuestion" disabled>Наступне питання</button>
+        <button class="reset-btn" id="resetTest">Почати спочатку</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
